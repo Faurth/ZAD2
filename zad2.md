@@ -1,5 +1,9 @@
 # Lekcja 1 – Markdown lekki język znaczników
 
+## Spis treści
+
+[toc]
+
 ## Wstęp
 
 Obecnie powszechnie wykorzystuje się języki ze znacznikami do opisania dodatkowych informacji umieszczanych w plikach tekstowych. Z pośród najbardziej popularnych można wspomnieć o:
