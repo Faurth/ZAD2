@@ -2,8 +2,7 @@
 
 ## Wstęp
 
-Obecnie powszechnie wykorzystuje się języki ze znacznikami do opisania dodatkowych informacji
-umieszczanych w plikach tekstowych. Z pośród najbardziej popularnych można wspomnieć o:
+Obecnie powszechnie wykorzystuje się języki ze znacznikami do opisania dodatkowych informacji umieszczanych w plikach tekstowych. Z pośród najbardziej popularnych można wspomnieć o:
 
 1. **html** – służącym do opisu struktury informacji zawartych na stronach internetowych,
 2. **Tex** (Latex) – poznany na zajęciach język do „profesjonalnego” składania tekstów,
@@ -23,7 +22,7 @@ Przykład kodu html i jego interpretacja w przeglądarce:
 > &lt;/**body**&gt;
 > &lt;/**html**&gt;
 
-![Przykład 1](Przykład 1.png).
+![Przykład 1](Przyklad1.png).
 
 Przykład kodu Latex i wygenerowanego pliku w formacie pdf
 
@@ -41,7 +40,7 @@ Przykład kodu Latex i wygenerowanego pliku w formacie pdf
 > \ **end** { **letter** }
 > \ **end** { **document** }
 
- ![Przykład 2](Przykład 2.png).
+ ![Przykład 2](Przyklad2.png).
 
 Przykład kodu XML – fragment dokumentu SVG (Scalar Vector Graphics)
 
@@ -67,12 +66,9 @@ Przykład kodu XML – fragment dokumentu SVG (Scalar Vector Graphics)
 
 
 
-W tym przypadku mamy np. znacznik np. <circle> opisujący parametry koła i który może być
-właściwie zinterpretowany przez dedykowaną aplikację (np. przeglądarki www).
+W tym przypadku mamy np. znacznik np. <circle> opisujący parametry koła i który może być właściwie zinterpretowany przez dedykowaną aplikację (np. przeglądarki www).
 
-Jako ciekawostkę można podać fakt, że również pakiet MS Office wykorzystuje format XML do
-przechowywania informacji o dodatkowych parametrach formatowania danych. Na przykład pliki z
-rozszerzeniem _docx_ , to nic innego jak spakowane algorytmem zip katalogi z plikami xml.
+Jako ciekawostkę można podać fakt, że również pakiet MS Office wykorzystuje format XML do przechowywania informacji o dodatkowych parametrach formatowania danych. Na przykład pliki z rozszerzeniem _docx_ , to nic innego jak spakowane algorytmem zip katalogi z plikami xml.
 
 > $unzip -l **test** .docx
 > Archive: **test** .docx
@@ -89,17 +85,64 @@ rozszerzeniem _docx_ , to nic innego jak spakowane algorytmem zip katalogi z pli
 > 241   	2020-10-11 18:20 	word / settings.xml
 > 1374 	2020-10-11 18:20 	[ Content_Types ] .xml
 
-Wszystkie te języki znaczników cechują się rozbudowaną i złożoną składnią i dlatego do ich edycji
-wymagają najczęściej dedykowanych narzędzi w postaci specjalizowanych edytorów. By
-wyeliminować powyższą niedogodność powstał **Markdown** - uproszczony język znaczników
-służący do formatowania dokumentów tekstowych (bez konieczności używania specjalizowanych
-narzędzi). Dokumenty w tym formacie można bardzo łatwo konwertować do wielu innych
-formatów: np. html, pdf, ps (postscript), epub, xml i wiele innych. Format ten jest powszechnie
-używany do tworzenia plików README.md (w projektach open source) i powszechnie
-obsługiwany przez serwery git’a. Język ten został stworzony w 2004 r. a jego twórcami byli John
-Gruber i Aaron Swartz. W kolejnych latach podjęto prace w celu stworzenia standardu rozwiązania
+Wszystkie te języki znaczników cechują się rozbudowaną i złożoną składnią i dlatego do ich edycji wymagają najczęściej dedykowanych narzędzi w postaci specjalizowanych edytorów. By wyeliminować powyższą niedogodność powstał **Markdown** - uproszczony język znaczników służący do formatowania dokumentów tekstowych (bez konieczności używania specjalizowanych narzędzi). Dokumenty w tym formacie można bardzo łatwo konwertować do wielu innych formatów: np. html, pdf, ps (postscript), epub, xml i wiele innych. Format ten jest powszechnie używany do tworzenia plików README.md (w projektach open source) i powszechnie obsługiwany przez serwery git’a. Język ten został stworzony w 2004 r. a jego twórcami byli John Gruber i Aaron Swartz. W kolejnych latach podjęto prace w celu stworzenia standardu rozwiązania
 i tak w 2016 r. opublikowano dokument RFC 7764 który zawiera opis kilku odmian tegoż języka:
 
 - CommonMark,
 - GitHub Flavored Markdown (GFM),
 - Markdown Extra.
+
+## Podstawy składni
+
+Podany link: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet zawiera opis podstawowych elementów składni w języku angielskim. Poniżej zostanie przedstawiony ich krótki opis w języku polskim.
+
+### Definiowanie nagłówków
+
+![definiowanie_nagłówkow](definiowanie_naglowkow.png)
+
+W tym celu używamy znaku kratki
+
+Lewe okno zawiera kod źródłowy – prawe -podgląd przetworzonego tekstu
+
+
+### Definiowanie list
+
+![definiowanie_list](definiowanie_list.png)
+
+Listy numerowane definiujemy wstawiając numery kolejnych pozycji zakończone kropką.
+
+Listy nienumerowane definiujemy znakami: *,+,-
+
+### Wyróżnianie tekstu
+
+![wyroznianie_textu](wyroznianie_textu.png)
+
+### Tabele
+
+![tabele](tabele.png)
+
+Centrowanie zawartości kolumn realizowane jest poprzez odpowiednie użycie znaku dwukropka:
+
+### Odnośniki do zasobów
+
+\[odnośnik do zasobów\]\(www.gazeta.pl\)
+
+\[odnośnik do pliku\]\(LICENSE.md\)
+
+\[odnośnik do kolejnego zasobu\]\[1\]
+
+\[1\]: http://google,com(http://google,com)
+
+**Obrazki** 
+\!\[alt text\]\(https://server.com/images/icon48.png "Logo 1"\) – obrazek z zasobów
+internetowych
+
+\!\[\]\(C:/Users/kulaw/Desktop/Nowy folder/logo.png) – obraz z lokalnych zasobów
+
+### Kod źródłowy dla różnych języków programowania
+
+![kod_zrodlowy](kod_zrodlowy.png)
+
+### Tworzenie spisu treści na podstawie nagłówków
+
+![spis_tresci](spis_tresci.png)
